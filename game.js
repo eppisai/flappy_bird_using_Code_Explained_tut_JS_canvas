@@ -62,6 +62,20 @@ const bird = {
     }
 
 }
+//start screen
+const getReady = {
+    sX: 0,
+    sY: 228,
+    w: 173,
+    h: 152,
+    x: cvs.width / 2 - 173 / 2,
+    y: 80,
+    draw: function () {
+        ctx.drawImage(sprite, this.sX, this.sY, this.w, this.h, this.x, this.y, this.w, this.h);
+    }
+
+}
+
 // draw function
 function draw() {
     ctx.fillStyle = "#70c5ce";
@@ -69,6 +83,7 @@ function draw() {
     bg.draw();
     fg.draw();
     bird.draw();
+    getReady.draw();
 
 }
 
